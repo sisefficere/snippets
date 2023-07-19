@@ -11,7 +11,7 @@
     });
 </script>
 
-<form action="" use:enhance>
+<form action="" use:enhance method="POST">
     <label class="flex flex-col gap-1 w-full">
         <input
             type="text"
