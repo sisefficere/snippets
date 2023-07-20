@@ -11,7 +11,7 @@ z.object({
   endereco: z.string().max(160, {
     message: "Endereço muito longo! Insira no máximo 160 caracteres."
   }),
-  whatsapp: z.any(),
+  whatsapp: z.any().optional(),
   plano: z.string(),
   motivo: z.string().min(1),
   instagramAmigo: z.string().max(20, {

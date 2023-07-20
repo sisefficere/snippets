@@ -16,32 +16,31 @@
         <input
             type="text"
             name="nome"
+            class="{$errors.motivo != undefined ? "nlf-input-invalid" : ""}"
             required
             bind:value={$form.nome}
         />
         {#if $errors.nome}
-            <span class="text-sm text-vermelho">{$errors.nome}</span>
+            <!-- Componente ErroValidacao com argumento erro={$error.campo} -->
         {/if}
     </label>
     <label class="flex flex-col gap-1 w-full">
         <input
             type="tel"
             name="telefone"
+            class="{$errors.motivo != undefined ? "nlf-input-invalid" : ""}"
             required
             bind:value={$form.telefone}
         />
         {#if $errors.telefone}
-            <span class="text-sm text-vermelho">{$errors.telefone}</span>
+            <!-- Componente ErroValidacao com argumento erro={$error.campo} -->
         {/if}
     </label>
     <button type="submit" class="nlf-botao nlf-botao-submit mt-3 self-center"
         >Enviar</button
     >
     {#if $message}
-        <p class="text-center p-5 dark:bg-branco rounded-md border-vermelho border-2">
-            <span class="text-vermelho font-bold">{$message}</span><br
-            />{$message === "Realize a verificação abaixo." ? "" : "Tente novamente mais tarde ou atualize a página."}
-        </p>
+        <!-- Componente ErroTurnstile com argumento message={$message} -->
     {/if}
     <Turnstile siteKey={import.meta.env.VITE_TURNSTILE_SITEKEY} />
 </form>

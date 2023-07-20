@@ -114,7 +114,7 @@ async function validateToken(token, secret) {
             // return message(form, 'Sua avaliação foi enviada!');
           }else{
             // este método do superforms já aciona o método fail do sveltekit e retorna ao cliente o erro
-            return message(form, `${error === "missing-input-response" ? "Realize a verificação abaixo." : "Formulário já enviado!"}`, {
+            return message(form, `${error === "missing-input-response" ? "Realize a verificação abaixo." : "Formulário já enviado ou solicitação inválida!"}`, {
               status: 400
           });
           }

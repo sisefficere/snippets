@@ -17,7 +17,7 @@
         required
     />
     <span class="font-bold text-auxiliar-primeira dark:text-branco"
-        ><span style="color: {letras === 1000 ? 'red' : '#617EF6'}"
+        ><span class="{letras === 1000 ? 'text-quarta' : 'text-black dark:text-branco'}"
             >{letras}</span
         >/1000</span
     >
