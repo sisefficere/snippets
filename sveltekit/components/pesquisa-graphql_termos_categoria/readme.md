@@ -1,0 +1,1 @@
+pesquisa por termos e por categoria, mediante graphql
