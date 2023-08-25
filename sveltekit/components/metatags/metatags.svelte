@@ -34,7 +34,7 @@
 {#if tituloSeo}
 <meta property="og:title" content={tituloSeo} />
 {:else}
-<meta property="og:title" content={he.decode(tituloSemHtml) + ' - ' + nomeSite} />
+<meta property="og:title" content={titulo.includes(nomeSite) ? he.decode(titulo) : he.decode(titulo) + ' - ' + nomeSite} />
 {/if}
 <meta property="og:type" content="website" />
 <meta
